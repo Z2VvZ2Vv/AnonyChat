@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>AnonyChat</title>
+    <link rel="shortcut icon" href="src/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+</head>
+<body data-theme="root">
+    <div id="warningmessage" class="hidden">Désolé, l'écran est trop petit pour afficher correctement cette page.</div>
+    <div id="all">
+        <div id="navbar">
+            <img id="logo" src="src/chat96black.png" alt="logo">
+            <button class="navlinks" onclick="opentab(event, 'main')" id="defaultOpen">Public room</button>
+            <hr id="separate">
+            <button class="navlinks" onclick="opentab(event, 'adding')">Faire sa chat room</button>
+            <div class="darkmodeSlider">
+                <p id="darkmode">Mode sombre</p>
+                <input class="switch" type="checkbox" id="switch" />
+                <label class="switch" for="switch">Toggle</label>
+            </div>
+            
+        </div>
+        <div class="allContent">
+            <div id="main" class="content">
+                <ul id="messages"></ul>
+                <input id="clientmessage" type="text" onkeypress="ifenter(event)"" placeholder="Entrer votre message...">
+                <div id="send">
+                    <button onclick="send()"><img id="butsend" src="src/send64black.png"></button>
+                </div>
+                </div>
+                <div id="adding" class="content">
+                    <h1>Créer une room privée</h1>
+                    <hr>
+                    <div id="pseudo">
+                        <p>Ici c'est privé, fait ta propre chat room à l'abris des regards ! Crée un lien et donne le à qui tu veux !</p>
+                        <input id='username' type="text" placeholder="Ici le lien vers cette room" onkeypress="" readonly>
+                    </div>
+                    <div id="access">  
+                        <button onclick="create()">Créer ma chat room</button>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
