@@ -2,7 +2,11 @@
 
 AnonyChat est une application de chat anonyme qui utilise Express et Socket.io pour permettre aux utilisateurs de discuter sans révéler leur identité. 
 
-## Comment lancer l'application
+## Accéder à l'application
+
+Pour aller sur AnonyChat, sans rien installer, allez sur cette addresse : https://anonychat.ddns.net
+
+## Comment lancer l'application localement
 
 Pour lancer AnonyChat, ouvrez une invite de commande et naviguez vers le répertoire de l'application. Une fois dans le répertoire, tapez la commande suivante 
 ```
